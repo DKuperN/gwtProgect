@@ -1,0 +1,1 @@
+<span id="footer">myGwtProgect by DKuperN</span>
