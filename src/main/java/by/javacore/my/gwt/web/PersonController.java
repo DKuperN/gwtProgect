@@ -1,7 +1,6 @@
 package by.javacore.my.gwt.web;
 
-import java.util.List;
-
+import by.javacore.my.gwt.model.Person;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -10,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.servlet.ModelAndView;
 
-import by.javacore.my.gwt.model.Person;
+import java.util.List;
 
 @Controller
 public class PersonController {
@@ -43,8 +42,7 @@ public class PersonController {
 	@RequestMapping("/allPersons.htm")
 	public ModelAndView allPersons()
 	{
-		List<Person> persons = sessionFactory.getCurrentSession().
-			createQuery("FROM Person").list();
+		List<Person> persons = sessionFactory.getCurrentSession().createQuery("FROM Person").list();
 		
 		ModelAndView mav = new ModelAndView("allPersons");
 		mav.addObject("persons", persons);

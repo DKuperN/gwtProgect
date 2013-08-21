@@ -56,7 +56,7 @@
 	</bean>
 
 	<aop:config>
-		<aop:pointcut id="webMethods" expression="execution(* by.javacore.web.*.*(..))" />
+		<aop:pointcut id="webMethods" expression="execution(* by.javacore.my.gwt.web.*.*(..))" />
 		<aop:advisor advice-ref="txAdvice" pointcut-ref="webMethods" />
 	</aop:config>
 
