@@ -48,5 +48,11 @@ public class PersonController {
 		mav.addObject("persons", persons);
 		return mav;
 	}
+
+    @RequestMapping(value="/info.htm")
+    public String info()
+    {
+        return "info";
+    }
 	
 }
